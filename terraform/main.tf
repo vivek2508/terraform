@@ -15,7 +15,7 @@ terraform {
 provider "azurerm" {
   # Configuration options
 }
-
+}
  
 data "azurerm_client_config" "current" {}
  
