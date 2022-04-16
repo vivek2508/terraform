@@ -6,23 +6,21 @@ terraform {
     key                  = "terraformgithubexample.tfstate"
   }
 }
- required_version = ">=0.12"
-  
-  required_providers {
+required_providers {
     azurerm = {
-      source = "hashicorp/azurerm"
-      version = "~>2.0"
+      source  = "hashicorp/azurerm"
+      version = "~> 3.0.2"
     }
-  }
+  
+  required_version = ">= 1.1.0"
+}
 
 provider "azurerm" {
   features {}
 }
- 
-data "azurerm_client_config" "current" {}
- 
-#Create Resource Group
-resource "azurerm_resource_group" "tamops" {
-  name     = "tamops"
-  location = "eastus2"
+
+resource "azurerm_resource_group" "rg" {
+  name     = "myTFResourceGroup"
+  location = "westus2"
 }
+  
