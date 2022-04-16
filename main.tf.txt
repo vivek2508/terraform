@@ -1,0 +1,6 @@
+Azure_client_id: 18841599-cca5-4af3-9a43-422f6140799b
+Azure_tenant_id: 186b9458-99df-4a3f-abea-40a70333cebc
+
+900c6120-a1f2-472a-b7ef-bb721e55c297
+
+JDO7Q~bjRKqPzcYs3LcIokJBWyDpwyGo7YsjT
