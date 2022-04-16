@@ -5,6 +5,7 @@ terraform {
     container_name       = "conatiner1509"
     key                  = "terraformgithubexample.tfstate"
   }
+}
  required_version = ">=0.12"
   
   required_providers {
@@ -16,7 +17,6 @@ terraform {
 
 provider "azurerm" {
   features {}
-}
 }
  
 data "azurerm_client_config" "current" {}
