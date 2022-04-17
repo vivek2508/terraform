@@ -9,7 +9,7 @@ terraform {
     resource_group_name  = "MyRg"
     storage_account_name = "storage1509"
     container_name       = "conatiner1509"
-    key                  = "terraformgithubexample.tfstate"
+    key                  = "mt.tfstate"
   }
 }
   
@@ -24,6 +24,6 @@ provider "azurerm" {
 }
 resource "azurerm_resource_group" "rg" {
   name     = "myTFResourceGroup"
-  location = "eastus"
+  location = "eastus2"
 }
   
