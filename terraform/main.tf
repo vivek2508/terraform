@@ -5,8 +5,6 @@ terraform {
       version = "=2.46.0"
     }
   }
-  
-terraform {
   backend "azurerm" {
     resource_group_name  = "MyRg"
     storage_account_name = "storage1509"
@@ -14,6 +12,9 @@ terraform {
     key                  = "terraformgithubexample.tfstate"
   }
 }
+  
+
+  
 provider "azurerm" {
   features {}
   # subscription_id = var.subscription_id
