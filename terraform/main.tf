@@ -25,13 +25,13 @@ provider "azurerm" {
 
 
 # Create a resource group
+resource "random_pet" "rg-name" {
+  prefix    = var.resource_group_name_prefix
+}
+
 resource "azurerm_resource_group" "rg" {
-  name     = "demo-rg"
-  location = "West Europe"
-  tags =  {
-    env = "dev"
-    cost = "TA102AXY"
-  }
+  name      = random_pet.rg-name.id
+  location  = var.resource_group_location
 }
 # Create virtual network
 resource "azurerm_virtual_network" "myterraformnetwork" {
