@@ -32,7 +32,7 @@ jobs:
 #       ARM_TENANT_ID: ${{ secrets.AZURE_AD_TENANT_ID }}
 
     runs-on: ubuntu-latest
-    environment: production
+#     environment: production
 #     container:
 #       image: hub.docker.com/r/rancher/ansible-runner
 #       credentials:
@@ -61,6 +61,19 @@ jobs:
       with:
          username: vivek1509
          password: Pass@321Vks
+    - name: Checkout 
+      uses: actions/checkout@v2 # Required to mount the Github Workspace to a volume 
+    - uses: addnab/docker-run-action@v3
+      with:
+        username: vivek1509
+        password: Pass@321Vks
+        image: hub.docker.com/r/rancher/ansible-runner
+        options: -v ${{ github.workspace }}:/work -e ABC=123
+        run: |
+           echo "Running Script"
+           /work/run-script
+         
+         
          
     - name: 'Terraform Init'
       uses: hashicorp/terraform-github-actions@master
