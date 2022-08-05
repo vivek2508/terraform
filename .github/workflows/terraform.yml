@@ -63,6 +63,8 @@ jobs:
          password: Pass@321Vks
     - name: pull image
       run: docker pull rancher/ansible-runner:v0.0.1
+    - name: version
+      run: ansible --version
     
     - name: Checkout 
       uses: actions/checkout@v2 # Required to mount the Github Workspace to a volume 
