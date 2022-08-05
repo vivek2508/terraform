@@ -73,9 +73,7 @@ jobs:
         registry: https://registry.hub.docker.com/
         image: rancher/ansible-runner:v0.0.1
         options: -v ${{ github.workspace }}:/work -e ABC=123
-        run: |
-           echo "Running Script"
-           /work/run-script
+        
          
          
          
