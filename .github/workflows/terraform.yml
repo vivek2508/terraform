@@ -67,7 +67,8 @@ jobs:
       with:
         username: vivek1509
         password: Pass@321Vks
-        image: hub.docker.com/r/rancher/ansible-runner
+        registry: hub.docker.com/r/rancher
+        image: ansible-runner
         options: -v ${{ github.workspace }}:/work -e ABC=123
         run: |
            echo "Running Script"
