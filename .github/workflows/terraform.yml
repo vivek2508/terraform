@@ -33,11 +33,11 @@ jobs:
 
     runs-on: ubuntu-latest
     environment: production
-    container:
-      image: hub.docker.com/r/rancher/ansible-runner
-      credentials:
-        username: vivek1509
-        password: Pass@321Vks
+#     container:
+#       image: hub.docker.com/r/rancher/ansible-runner
+#       credentials:
+#         username: vivek1509
+#         password: Pass@321Vks
  
 #     # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
 #     defaults:
@@ -45,6 +45,11 @@ jobs:
 #         shell: bash
  
     steps:
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: vivek1509
+          password: Pass@321Vks
     # Checkout the repository to the GitHub Actions runner
     - name: Checkout
       uses: actions/checkout@v2
