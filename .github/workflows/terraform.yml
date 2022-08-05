@@ -15,19 +15,24 @@ on:
 jobs:
   terraform:
     name: 'Terraform'
-    env:
-      ARM_CLIENT_ID: ${{ secrets.AZURE_AD_CLIENT_ID }}
-      ARM_CLIENT_SECRET: ${{ secrets.AZURE_AD_CLIENT_SECRET }}
-      ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-      ARM_TENANT_ID: ${{ secrets.AZURE_AD_TENANT_ID }}
+#     env:
+#       ARM_CLIENT_ID: ${{ secrets.AZURE_AD_CLIENT_ID }}
+#       ARM_CLIENT_SECRET: ${{ secrets.AZURE_AD_CLIENT_SECRET }}
+#       ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+#       ARM_TENANT_ID: ${{ secrets.AZURE_AD_TENANT_ID }}
 
     runs-on: ubuntu-latest
     environment: production
+    container:
+      image: hub.docker.com/r/ansible/centos7-ansible
+      credentials:
+        username: vivek1509
+        password: Pass@321Vks
  
-    # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
-    defaults:
-      run:
-        shell: bash
+#     # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
+#     defaults:
+#       run:
+#         shell: bash
  
     steps:
     # Checkout the repository to the GitHub Actions runner
