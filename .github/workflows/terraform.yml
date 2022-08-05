@@ -34,7 +34,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: production
     container:
-      image: hub.docker.com/r/ansible/centos7-ansible
+      image: hub.docker.com/r/rancher/ansible-runner
       credentials:
         username: vivek1509
         password: Pass@321Vks
