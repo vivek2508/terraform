@@ -1,16 +1,26 @@
-name: 'Terraform'
+# name: 'Terraform'
  
+# on:
+#   workflow_dispatch:
+#     inputs:
+#       apply:
+#         description: Whether to run terraform apply
+#         default: "false"
+#         required: true
+#       branches:
+#         default: main
+#         required: true
+#   pull_request:
+  
+name: Deploy Oracle Role
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
     inputs:
-      apply:
-        description: Whether to run terraform apply
-        default: "false"
-        required: true
-      branches:
-        default: main
-        required: true
-  pull_request:
+        branch:
+          required: true
+          default: main
  
 jobs:
   terraform:
