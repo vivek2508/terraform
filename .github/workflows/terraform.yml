@@ -62,7 +62,7 @@ jobs:
 #          username: vivek1509
 #          password: Pass@321Vks
 #     - name: pull image
-#       run: docker pull rancher/ansible-runner:v0.0.1
+#       run: docker run rancher/ansible-runner:v0.0.1
     - name: version
       run: ansible --version
     - name: Python
