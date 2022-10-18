@@ -1,6 +1,6 @@
-name: Mixed inputs
+name: inputs
 on:
-  workflow_call:
+  workflow_dispatch:
     inputs:
       name:
         type: choice
