@@ -1,4 +1,5 @@
 name: test inputs
+
 on:
   workflow_dispatch:
     inputs:
@@ -6,10 +7,10 @@ on:
         type: choice
         description: choose environment
         options: 
-        - poc
-        - dev
-        - acc
-        - prd
+          - poc
+          - dev
+          - acc
+          - prd
       application:
         required: true
       node:
