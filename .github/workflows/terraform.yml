@@ -1,6 +1,6 @@
 name: Mixed inputs
 on:
-  workflow_call:
+  workflow_dispatch:
     inputs:
       name:
         type: choice
@@ -18,19 +18,19 @@ on:
         options:
           - node1
           - node2
-      environment:
-        type: environment
+#       environment:
+#         type: environment
 jobs:
   greet:
     name: Send greeting
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     steps:
     - name: Send greeting
-      run: echo "${{ github.event.inputs.environment }} ${{ github.event.inputs.node }}"
+      run: echo "${{ github.event.inputs.name }}${{ github.event.inputs.node }}"
 # # name: 'Terraform'
  
-# # on:
+# ## on:
 # #   workflow_dispatch:
 # #     inputs:
 # #       apply:
