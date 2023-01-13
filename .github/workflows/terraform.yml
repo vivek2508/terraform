@@ -23,7 +23,7 @@ on:
 jobs:
   greet:
     name: Send greeting
-    runs-on: vmpllsdevwe02
+    runs-on: self-hosted
 
     steps:
     - name: Send greeting
